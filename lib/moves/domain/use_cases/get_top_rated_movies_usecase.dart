@@ -5,14 +5,14 @@ import 'package:movies/moves/domain/repos/base_movies_repos.dart';
 
 import '../entyty/movie_entity.dart';
 
-class GetTopRatedMoviesUseCase extends BaseUseCase <List<MovieEntity>>{
+class GetTopRatedMoviesUseCase extends BaseUseCase <List<MovieEntity>,NoParam>{
 
   final BaseMoviesRepos baseMoviesRepos;
 
   GetTopRatedMoviesUseCase(this.baseMoviesRepos);
   
   @override
-  Future<Either<Faillure, List<MovieEntity>>> call() async{
+  Future<Either<Faillure, List<MovieEntity>>> call(NoParam param) async{
   return await baseMoviesRepos.getTopRatedMovies();
   }
 

@@ -6,7 +6,7 @@ class MovieDetailEntity extends Equatable {
   final String backdropPath;
   final String overview;
   final String releaseDate;
-  final int runTime;
+  final int runtime;
   final String title;
   final String voteAverage;
   final List<GenresEntity> genres;
@@ -16,7 +16,7 @@ class MovieDetailEntity extends Equatable {
     required this.backdropPath,
     required this.overview,
     required this.releaseDate,
-    required this.runTime,
+    required this.runtime,
     required this.title,
     required this.voteAverage,
     required this.genres,
@@ -28,7 +28,7 @@ class MovieDetailEntity extends Equatable {
         backdropPath,
         overview,
         releaseDate,
-        runTime,
+        runtime,
         title,
         voteAverage,
         genres
