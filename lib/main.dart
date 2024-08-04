@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:movies/core/services/services_locator.dart';
+import 'package:movies/core/utils/app_string.dart';
 import 'package:movies/moves/presntation/views/movies_view.dart';
+
 
 
 void main() {
@@ -14,7 +16,9 @@ class MoviesApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      title: AppString.appName,
       debugShowCheckedModeBanner: false,
+
       home: MoviesView(),
     );
   }

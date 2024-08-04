@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:movies/core/utils/app_string.dart';
 import 'package:movies/moves/presntation/contorller/movies_bloc.dart';
 import 'package:movies/moves/presntation/contorller/movies_event.dart';
+import 'package:movies/moves/presntation/views/movie_detail_view.dart';
 import '../../../core/services/services_locator.dart';
 import '../componants/now_playing_componant.dart';
 import '../componants/popular_componant.dart';
@@ -32,7 +34,7 @@ class MoviesView extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Popular",
+                    AppString.popular,
                       style: GoogleFonts.poppins(
                         fontSize: 19,
                         fontWeight: FontWeight.w500,
@@ -41,13 +43,15 @@ class MoviesView extends StatelessWidget {
                       ),
                     ),
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+
+                      },
                       child: const Padding(
                         padding: EdgeInsets.all(8.0),
                         child: Row(
                           children: [
                             Text(
-                              'See More',
+                             AppString.seeMore,
                               style: TextStyle(
                                 color: Colors.white,
                               ),
@@ -76,7 +80,7 @@ class MoviesView extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Top Rated",
+                     AppString.topRated,
                       style: GoogleFonts.poppins(
                         fontSize: 19,
                         fontWeight: FontWeight.w500,
@@ -91,7 +95,7 @@ class MoviesView extends StatelessWidget {
                         child: Row(
                           children: [
                             Text(
-                              'See More',
+                            AppString.seeMore,
                               style: TextStyle(
                                 color: Colors.white,
                               ),

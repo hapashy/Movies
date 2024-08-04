@@ -8,6 +8,8 @@ import 'package:movies/moves/presntation/contorller/movies_bloc.dart';
 import 'package:movies/moves/presntation/contorller/movies_state.dart';
 import 'package:shimmer/shimmer.dart';
 
+import '../views/movie_detail_view.dart';
+
 class PopularComponant extends StatelessWidget {
   const PopularComponant({super.key});
 
@@ -37,7 +39,9 @@ class PopularComponant extends StatelessWidget {
                     return Container(
                       padding: const EdgeInsets.only(right: 8.0),
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+
+                        },
                         child: ClipRRect(
                           borderRadius:
                               const BorderRadius.all(Radius.circular(8.0)),
