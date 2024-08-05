@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:movies/core/utils/app_string.dart';
 import 'package:movies/moves/presntation/contorller/movies_bloc.dart';
 import 'package:movies/moves/presntation/contorller/movies_event.dart';
-import 'package:movies/moves/presntation/views/movie_detail_view.dart';
 import '../../../core/services/services_locator.dart';
 import '../componants/now_playing_componant.dart';
 import '../componants/popular_componant.dart';
@@ -21,7 +20,7 @@ class MoviesView extends StatelessWidget {
         ..add(GetPopularMoviesEvent())
         ..add(GetTopRatedMoviesEvent()),
       child: Scaffold(
-        backgroundColor: Colors.grey.shade900,
+      
         body: SingleChildScrollView(
           key: const Key('movieScrollView'),
           child: Column(

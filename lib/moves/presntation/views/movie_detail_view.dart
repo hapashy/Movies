@@ -28,9 +28,8 @@ class MovieDetailView extends StatelessWidget {
         ..add(
           GetMovieDetailsEvent(id)
         )..add(GetMovieRecommendation(id)),
-      child: Scaffold(
-        backgroundColor: Colors.grey.shade900,
-        body: const MovieDetailContent( ),
+      child: const Scaffold(
+        body:  MovieDetailContent( ),
       ),
     );
   }
@@ -250,6 +249,7 @@ class MovieDetailContent extends StatelessWidget {
     return SliverGrid(
       delegate: SliverChildBuilderDelegate(
         (context, index) {
+          
           final recommendation = state.recommendationEntity[index];
           return FadeInUp(
             from: 20,
@@ -260,7 +260,7 @@ class MovieDetailContent extends StatelessWidget {
                 imageUrl: ApiConstants.imageUrl(recommendation.backdropPath!),
                 placeholder: (context, url) => Shimmer.fromColors(
                   baseColor: Colors.grey[850]!,
-                  highlightColor: Colors.grey[800]!,
+                  highlightColor: Colors.grey[800]!,  
                   child: Container(
                     height: 170.0,
                     width: 120.0,

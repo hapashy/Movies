@@ -5,6 +5,7 @@ import 'package:movies/moves/presntation/views/movies_view.dart';
 
 
 
+
 void main() {
   ServicesLocator().init();
   runApp(const MoviesApp());
@@ -15,11 +16,13 @@ class MoviesApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
       title: AppString.appName,
-      debugShowCheckedModeBanner: false,
-
-      home: MoviesView(),
+      
+       debugShowCheckedModeBanner: false,
+      darkTheme: ThemeData.dark(),
+      themeMode: ThemeMode.dark,
+      home: const MoviesView(),
     );
   }
 }
