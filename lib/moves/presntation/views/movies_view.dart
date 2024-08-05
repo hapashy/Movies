@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:movies/core/utils/app_string.dart';
 import 'package:movies/moves/presntation/contorller/movies_bloc.dart';
 import 'package:movies/moves/presntation/contorller/movies_event.dart';
+
 import '../../../core/services/services_locator.dart';
 import '../componants/now_playing_componant.dart';
 import '../componants/popular_componant.dart';
@@ -20,7 +21,6 @@ class MoviesView extends StatelessWidget {
         ..add(GetPopularMoviesEvent())
         ..add(GetTopRatedMoviesEvent()),
       child: Scaffold(
-      
         body: SingleChildScrollView(
           key: const Key('movieScrollView'),
           child: Column(
@@ -33,7 +33,7 @@ class MoviesView extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                    AppString.popular,
+                      AppString.popular,
                       style: GoogleFonts.poppins(
                         fontSize: 19,
                         fontWeight: FontWeight.w500,
@@ -41,29 +41,8 @@ class MoviesView extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    InkWell(
-                      onTap: () {
-
-                      },
-                      child: const Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Row(
-                          children: [
-                            Text(
-                             AppString.seeMore,
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
-                            ),
-                            Icon(
-                              Icons.arrow_forward_ios,
-                              size: 16.0,
-                              color: Colors.white,
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
+                  
+                  
                   ],
                 ),
               ),
@@ -79,7 +58,7 @@ class MoviesView extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                     AppString.topRated,
+                      AppString.topRated,
                       style: GoogleFonts.poppins(
                         fontSize: 19,
                         fontWeight: FontWeight.w500,
@@ -87,27 +66,7 @@ class MoviesView extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    InkWell(
-                      onTap: () {},
-                      child: const Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Row(
-                          children: [
-                            Text(
-                            AppString.seeMore,
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
-                            ),
-                            Icon(
-                              Icons.arrow_forward_ios,
-                              size: 16.0,
-                              color: Colors.white,
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
+                   
                   ],
                 ),
               ),

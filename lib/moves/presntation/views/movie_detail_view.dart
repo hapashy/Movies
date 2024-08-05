@@ -11,8 +11,7 @@ import 'package:shimmer/shimmer.dart';
 
 import '../../../core/services/services_locator.dart';
 import '../../domain/entyty/genres_entity.dart';
-import '../../domain/entyty/movie_detail_entity.dart';
-import '../../domain/entyty/recommendation_entity.dart';
+
 import '../contorller/movie_details_bloc.dart';
 import 'dummy.dart';
 
